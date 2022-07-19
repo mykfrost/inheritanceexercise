@@ -12,21 +12,21 @@ HtmlElement.prototype.focus = function(){
 //NewDropDOwn
 
 function HtmlSelectedElement (items = []){
- //const item = [];
+
     this.items = items ;
 
-    this.addItem = function(items){
-    this.items.push(items);   
+    this.addItem = function(item){
+    this.items.push(item);   
    }
 
-    this.removeItem = function(items){
-    this.items.splice(this.items.indexOf(items),1);
+    this.removeItem = function(item){
+    this.items.splice(this.items.indexOf(item),1);
 
     }
 
     this.render = function(){
         return `
-        <select>${this.items.map(items =>`
+        <select>${this.items.map(item =>`
         <options>${items}</option>`).join('')}
         <select>`;
     }
