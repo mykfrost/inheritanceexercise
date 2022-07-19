@@ -5,7 +5,7 @@ this.click = function(){
 
 }
 
-HTMLHRElement.prototype.focus = function(){
+HtmlElement.prototype.focus = function(){
     console.log('Focussed');
 }
 
@@ -23,11 +23,6 @@ function HtmlSelectedElement (items = []){
     this.items.splice(this.items.indexOf(items),1);   
     }
  }
-
-HtmlSelectedElement.prototype.focussed = function(){
-    Object.getPrototypeOf(HtmlElement);
-}
-
 
 
 HtmlSelectedElement.prototype = new HtmlElement();
