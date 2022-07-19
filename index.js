@@ -13,14 +13,22 @@ HtmlElement.prototype.focus = function(){
 
 function HtmlSelectedElement (items = []){
  //const item = [];
- this.items = items ;
+    this.items = items ;
 
- this.addItem = function(items){
+    this.addItem = function(items){
     this.items.push(items);   
    }
 
- this.removeItem = function(items){
-    this.items.splice(this.items.indexOf(items),1);   
+    this.removeItem = function(items){
+    this.items.splice(this.items.indexOf(items),1);
+
+    }
+
+    this.render = function(){
+        return `
+        <select>${this.items.map(items =>`
+        <options>${items}</option>`).join('')}
+        <select>`;
     }
  }
 
@@ -28,3 +36,11 @@ function HtmlSelectedElement (items = []){
 HtmlSelectedElement.prototype = new HtmlElement();
 //Make the constructor our child obect
 HtmlSelectedElement.prototype.constructor = HtmlSelectedElement;
+
+function HtmlImageElement(src){
+    this.src = src;
+
+    this.render = function(){
+        return `<img src="${this.src}"/>`;
+    }
+}
