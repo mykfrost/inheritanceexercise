@@ -28,6 +28,7 @@ function HtmlSelectedElement (items = []){
         return `
         <select>${this.items.map(item =>`<options>${items}</option>`).join('')}
         <select>`;
+        //render item used is renderItem = item =>`<option>${items}</option>`;
     }
  }
 
