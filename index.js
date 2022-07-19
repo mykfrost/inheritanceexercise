@@ -26,8 +26,7 @@ function HtmlSelectedElement (items = []){
 
     this.render = function(){
         return `
-        <select>${this.items.map(item =>`
-        <options>${items}</option>`).join('')}
+        <select>${this.items.map(item =>`<options>${items}</option>`).join('')}
         <select>`;
     }
  }
