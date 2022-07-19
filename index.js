@@ -5,8 +5,6 @@ this.click = function(){
 
 }
 
-
-
 HTMLHRElement.prototype.focus = function(){
     console.log('Focussed');
 }
